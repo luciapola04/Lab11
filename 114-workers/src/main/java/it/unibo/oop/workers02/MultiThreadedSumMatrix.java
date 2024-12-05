@@ -54,7 +54,7 @@ public class MultiThreadedSumMatrix implements SumMatrix{
             w.start();
         }
 
-        long sum = 0;
+        double sum = 0;
         for (final Worker w: workers) {
             try {
                 w.join();
@@ -63,7 +63,6 @@ public class MultiThreadedSumMatrix implements SumMatrix{
                 throw new IllegalStateException(e);
             }
         }
-     
         return sum;
     }
 }
