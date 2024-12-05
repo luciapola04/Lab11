@@ -17,7 +17,6 @@ import javax.swing.SwingUtilities;
  */
 @SuppressWarnings("PMD.AvoidPrintStackTrace")
 public final class ConcurrentGUI extends JFrame {
-
     private static final long serialVersionUID = 1L;
     private static final double WIDTH_PERC = 0.2;
     private static final double HEIGHT_PERC = 0.1;
@@ -54,7 +53,7 @@ public final class ConcurrentGUI extends JFrame {
      * The counter agent is implemented as a nested class. This makes it
      * invisible outside and encapsulated.
      */
-    private class Agent implements Runnable {
+    private final class Agent implements Runnable {
         /*
          * Stop is volatile to ensure visibility. Look at:
          * 
